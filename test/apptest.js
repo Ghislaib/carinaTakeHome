@@ -9,13 +9,12 @@ describe("Start running tests", () => {
   describe("/GET /shoot/:play/:player_name", () => {
       it("it should test for the right input parameter", (done) => {
       chai.request(server)
-        .get("/shoot/:play/:player_name")
+        .get("/shoot")
         .query({play: 'rock', player_name: 'ghis'})
         .end((err, res) => {
-              console.log(res.body);
               (res).should.have.status(200);
               (res.body).should.be.a("text");
-              // (res.body).should.be.eql("ghis wins the round");
+              (res.body).should.be.eql("ghis wins the round");
               done();
            });
         });
