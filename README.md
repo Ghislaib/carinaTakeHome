@@ -15,3 +15,5 @@ Then run `nodemon` to start the server
 `npm install chai`
 
 `npm install chai-http`
+
+Copy paste `mocha` on your terminal/command line in your root directory to run the test suite.
